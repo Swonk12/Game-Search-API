@@ -18,15 +18,15 @@ export class JuegosComponent {
   
   ngOnInit(): void {
     this.ServeiApi.obtenirGames().subscribe((d: Resultatqry) => {
-      this.llJuegos = d.Search
+      this.llJuegos = d.results 
       console.log("---> ",this.llJuegos)
     })
   }
 
   ferConsulta() {
     this.ServeiApi.consultarGames(this.titolquebusco).subscribe((d: Resultatqry) => {
-      this.llJuegos = d.Search
-      console.log(this.llJuegos)
+      this.llJuegos = d.results 
+      console.log(d)
 
     })
     }
