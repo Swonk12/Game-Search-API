@@ -27,7 +27,6 @@ export class JuegosComponent {
     this.ServeiApi.consultarGames(this.titolquebusco).subscribe((d: Resultatqry) => {
       this.llJuegos = d.results 
       console.log(d)
-
     })
     }
 }
