@@ -1,27 +1,54 @@
-# GameSearchAPI
+![banner](./src/assets/_05b45034-4505-4fa0-9785-2ff75cd02ef7.jpeg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+Una aplicación web desarrollada con **Angular** que se conecta a una **API de búsqueda de juegos**. Permite a los usuarios buscar títulos de videojuegos y obtener información detallada como:
 
-## Development server
+- Título del juego
+- Fecha de lanzamiento
+- Puntuación en Metacritic
+- Imagen de portada del juego
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Cómo Funciona
+Introduce un título de videojuego en la barra de búsqueda.
+La aplicación realiza una solicitud a la API externa para obtener los detalles del juego.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Los resultados se muestran con el título, fecha de lanzamiento, puntuación en Metacritic y la imagen de portada del juego.
 
-## Build
+### Ejemplo de Búsqueda:
+#### Resultados de Búsqueda:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![search](./src/assets/search.png)
 
-## Running unit tests
+## Características
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Funcionalidad de búsqueda**: Busca juegos por su título.
+- **Visualización de información del juego**: Muestra la fecha de lanzamiento, puntuación en Metacritic y la imagen de portada.
+- **Integración con API**: Obtiene datos de juegos mediante una API REST.
 
-## Running end-to-end tests
+## Tecnologías Utilizadas
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Angular**: Framework de frontend.
+- **API REST**: Conexión con una base de datos externa de videojuegos.
+- **TypeScript**: Uso de tipado fuerte para una estructura de código clara.
+- **PHP**: Integración de ficheros PHP para hacer consulta API.
 
-## Further help
+## Instalación
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Swonk12/Game-Search-API.git
+   cd Game-Search-API
+   ```
+
+2. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+3. Ejecuta la aplicación:
+    ```bash
+    ng serve
+    ```
+4. Accede a la aplicación en ``http://localhost:4200``
+
+
+
