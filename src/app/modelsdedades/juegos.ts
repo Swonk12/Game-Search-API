@@ -3,4 +3,4 @@ export class juegos {
     released: string | undefined;
     background_image: string | undefined;
     metacritic: string | undefined;
-    }
+}
