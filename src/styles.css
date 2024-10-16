@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fondo llamativo para el body */
+body {
+    margin: 0;
+    padding: 0;
+    background: #7898B3;
+    background: radial-gradient(at left top, #7898B3, #3B2630);
+    background-attachment: fixed; /* Fijar el fondo al viewport */
+    background-size: cover; /* Asegurar que cubra todo el fondo */
+}
+
+/* Añadir partículas flotantes para un efecto visual atractivo */
+@keyframes particle {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50vw);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: particle 10s linear infinite;
+    pointer-events: none;
+}
+
+.particle:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.particle:nth-child(even) {
+    animation-duration: 8s;
+}
+
+.particle:nth-child(3n) {
+    animation-duration: 12s;
+}

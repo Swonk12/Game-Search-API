@@ -1,25 +1,28 @@
-<!-- formulari de recerca-->
+<!-- Formulario de búsqueda -->
 <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="form-outline form-white mb-4">
-            <label class="form-label">Buscar</label>
-            <input type="titolpeli" placeholder="introduce algun juego" name="titolpeli" id="titolpeli" class="form-control form-control-lg" [(ngModel)]="titolquebusco"/>
+            <label class="form-label" for="titolpeli">Buscar</label>
+            <input type="text" placeholder="Introduce el nombre de un juego" name="titolpeli" id="titolpeli" class="form-control form-control-lg" [(ngModel)]="titolquebusco"/>
         </div>
-        <button class="btn btn-outline-dark btn-lg px-5" type="submit" (click)="ferConsulta()">ENVIAR</button>
+        <div class="text-center"> <!-- Asegura que el botón esté centrado -->
+            <button class="btn btn-outline-dark btn-lg px-5" type="submit" (click)="ferConsulta()">ENVIAR</button>
+        </div>
+    </div>
 </div>
 
-<!-- Galeria de cartells -->
-<div class="row align-items-center" style="margin-left: 10px; margin-right: 10px; margin-top: 40px;">
-    <div *ngFor="let p of llJuegos; let i = index" class="col-xs-6 col-sm-4 col-md-3 col-lg-2item" style="margin-bottom: 10px;">
+<!-- Galería de carteles -->
+<div class="row justify-content-center" style="margin-left: 10px; margin-right: 10px; margin-top: 40px;">
+    <div *ngFor="let p of llJuegos; let i = index" class="col-xs-6 col-sm-4 col-md-3 col-lg-2item mb-4">
         <div class="card">
             <img src="{{ p.background_image }}" class="card-img-top" />
-            <div class="card-body" style="background-color: dimgray;">
-                <p class="card-text">{{ p.released }}<br />
-                    <span style="color: white;">{{ p.name }}</span><br />
-                    <!-- <span style="font-style: italic;">{{p.Type }}</span> -->
+            <div class="card-body">
+                <p class="card-text">
+                    Release date: {{ p.released }}<br />
+                    <span>{{ p.name }}</span><br />
+                    <span style="font-style: italic;">Metacritic: {{p.metacritic }} / 100</span>
                 </p>
             </div>
         </div>
     </div>
 </div>
-<!-- Fi Galeria -->
